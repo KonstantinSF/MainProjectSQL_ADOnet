@@ -1,0 +1,32 @@
+﻿<Window x:Class="ADO_net_wpf_HW3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO_net_wpf_HW3"
+        mc:Ignorable="d"
+        Title="BagShopDB" Height="450" Width="800" Icon="/shoppingBag.ico" Background="#FFEF6BC0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0" Background="#FF93C5FF">
+            <RadioButton Content="Show Bags" x:Name="ShowProductBtn" Checked="showProductBtn_Checked" Background="#FFC1FDC7" BorderBrush="Black"/>
+            <Separator/>
+            <RadioButton Content="Show Sales" x:Name="ShowSalesBtn" Checked="showSalesBtn_Checked" Background="#FFC1FDC7" BorderBrush="Black"/>
+            <TextBox Width="200" Margin="100,0,0,0" x:Name="searchBox" TextChanged="searchBox_TextChanged" Background="#FFEAF9D8"/>
+            <Separator/>
+            <TextBlock Width="auto" Margin="40,0,0,0" x:Name="NotificationTextBlock" FontSize="15" TextDecorations="Underline" />
+        </ToolBar>
+        <DataGrid Grid.Row="1" Margin="10" x:Name="xamlDataGridTable" ColumnWidth="*" CanUserAddRows="False" SelectionChanged="xamlDataGridTable_SelectionChanged"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" >
+            <Button HorizontalAlignment="Center" Margin="10" MinWidth="50" MaxWidth="500" Content="Buy" x:Name="buyBtn" Click="buyBtn_Click" Width="100" />
+            <Button Margin="10" MinWidth="50" MaxWidth="500" x:Name="AsyncHistory" Content="History" Click="AsyncHistoryBtn_Click" Width="100"/>
+            <Button Content="Add new product" x:Name="addProduct" Click="addProduct_Click" Margin="10" MinWidth="50" MaxWidth="500" Width="100"/>
+            <Button Content="Change product" x:Name="ChangeProduct" Click="ChangeProduct_Click" Margin="10" MinWidth="50" MaxWidth="500" Width="100"/>
+            
+        </StackPanel>
+    </Grid>
+</Window>

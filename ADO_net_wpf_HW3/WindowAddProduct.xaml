@@ -1,0 +1,64 @@
+﻿<Window x:Class="ADO_net_wpf_HW3.WindowAddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO_net_wpf_HW3"
+        mc:Ignorable="d"
+        Title="New Product" Height="300" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+           <TextBlock Grid.Row="0" Grid.Column="0" Text="Name" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="5,1" x:Name="productName" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black" TextChanged="productName_textChanged"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name" Margin="3" HorizontalAlignment="Left" />
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Manufacturer" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="5,1" x:Name="manufacturerName" TextChanged="manufacturerName_textChanged" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Price" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="5,1" x:Name="productPrice" TextChanged="productPrice_textChanged" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Quantitiy" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="5,1" x:Name="productQuantity" TextChanged="productQuantity_textChanged" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black"/>
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Type" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Margin="5,1" x:Name="typeName" TextChanged="typeName_textChanged" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black"/>
+        
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Gender" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Margin="5,1" x:Name="genderName" TextChanged="genderName_textChanged" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black"/>
+        
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Material" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="6" Grid.Column="1" Margin="5,1" x:Name="materialName" TextChanged="materialName_textChanged" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black"/>
+        
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="HangType" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="7" Grid.Column="1" Margin="5,1" x:Name="hangTypeName" TextChanged="hangTypeName_textChanged" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black"/>
+        
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Volume" Margin="3" HorizontalAlignment="Left"/>
+            <TextBox Grid.Row="8" Grid.Column="1" Margin="5,1" x:Name="productVolume" TextChanged="productVolume_textChanged" VerticalContentAlignment="Stretch" MaxWidth="900" MinWidth="100" TextAlignment="Left" BorderBrush="Black"/>
+
+        <Grid Grid.Row="9" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="OK" x:Name="OkAddProduct" HorizontalAlignment="Center" Click="OkAddProduct_Click" MinWidth="50" Margin="0,4" IsEnabled="False"/>
+            <Button Grid.Column="1" Content="Cancel" x:Name="CancelAddProduct" HorizontalAlignment="Center" Click="CancelAddProduct_Click" MinWidth="50" Margin="0,4"/>
+
+
+        </Grid>
+    </Grid>
+</Window>
